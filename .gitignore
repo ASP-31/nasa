@@ -4,3 +4,4 @@ scripts/.balance.cjs
 scripts/.render.cjs
 *.local
 .DS_Store
+tsconfig.tsbuildinfo
