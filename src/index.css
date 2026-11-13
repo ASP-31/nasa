@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-deep text-ink font-sans antialiased;
+    background-color: #101820;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #101820;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #344955;
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #53636d;
+  }
+  ::selection {
+    background: rgba(255, 209, 102, 0.35);
+    color: #f1f4f6;
+  }
+  :focus-visible {
+    outline: 2px solid #ffd166;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply rounded-lg border border-haze/40 bg-elevated shadow-card;
+  }
+  .panel-header {
+    @apply flex items-center gap-2 border-b border-haze/30 px-4 py-3;
+  }
+  .panel-title {
+    @apply font-display text-[13px] font-semibold uppercase tracking-[0.18em] text-mist;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2.5 font-display text-sm font-semibold uppercase tracking-wider transition-all duration-200 select-none;
+  }
+  .btn-primary {
+    @apply btn bg-solar text-deep hover:bg-solardeep active:translate-y-px disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-solar;
+  }
+  .btn-secondary {
+    @apply btn border border-haze/60 bg-slate/50 text-ink hover:border-solar/60 hover:bg-slate active:translate-y-px disabled:cursor-not-allowed disabled:opacity-40;
+  }
+  .btn-ghost {
+    @apply btn border border-transparent text-mist hover:border-haze/50 hover:text-ink disabled:cursor-not-allowed disabled:opacity-40;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-haze/50 bg-slate/40 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider;
+  }
+}
